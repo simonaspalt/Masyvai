@@ -47,12 +47,13 @@ public class Main {
                 fattestnum = array[i + 1];
             }
         }
+        System.out.println("Largest number is: " + fattestnum + " with index(s):");
         for (int i = 0; i < array.length; i++) {
             if (fattestnum == array[i]) {
-                System.out.println("largest number is: " + fattestnum + " with index: " + i);
+                System.out.print(" " + i);
             }
         }
-
+        System.out.println();
         System.out.println("2c");
 //Suskaičiuokite visų porinių (lyginių) indeksų reikšmių sumą;
         int evensum = 0;
@@ -143,7 +144,7 @@ public class Main {
         System.out.println("======== 3 ===========");
 //Sugeneruokite masyvą, kurio reikšmės atsitiktinės raidės A, B, C ir D,
 // o ilgis 200. Suskaičiuokite kiek yra kiekvienos raidės.
-        String[] letters = new String[199];
+        String[] letters = new String[200];
         for (int i = 0; i < letters.length; i++) {
             int num = (int) (Math.round(Math.random() * 3));
             if (num == 0) {
@@ -166,7 +167,7 @@ public class Main {
         System.out.println();
         System.out.println("======== 4 ===========");
         counter = 0;
-        String[] lettersa = new String[199];
+        String[] lettersa = new String[200];
 
         for (int q = 0; q < letters.length; q++) {
             if (letters[q] == "A") {
@@ -196,6 +197,81 @@ public class Main {
         for (int p = 0; p < lettersa.length; p++) {
             System.out.print(lettersa[p] + " ");
         }
+
+        System.out.println();
+        System.out.println("======== 5 ===========");
+        //Sugeneruokite 3 masyvus pagal 3 uždavinio sąlygą. Sudėkite masyvus, sudėdami atitinkamas reikšmes.
+        // Paskaičiuokite kiek unikalių (po vieną, nesikartojančių) reikšmių ir kiek unikalių kombinacijų gavote.
+        //pvz 3 mayvai:
+        //A,C,B,D,A
+        //C,C,B,B,C
+        //A,A,D,D,A
+        //ACA,CCA,BBD,DBD,ACA - TRYS UNIKALIOS, 4 KOMBINACIJOS
+
+        String[] letters1 = new String[200];
+        for (int i = 0; i < letters1.length; i++) {
+            int num = (int) (Math.round(Math.random() * 3));
+            if (num == 0) {
+                letters1[i] = "A";
+            }
+            if (num == 1) {
+                letters1[i] = "B";
+            }
+
+            if (num == 2) {
+                letters1[i] = "C";
+            }
+            if (num == 3) {
+                letters1[i] = "D";
+            }
+        }
+        String[] letters2 = new String[200];
+        for (int i = 0; i < letters2.length; i++) {
+            int num = (int) (Math.round(Math.random() * 3));
+            if (num == 0) {
+                letters2[i] = "A";
+            }
+            if (num == 1) {
+                letters2[i] = "B";
+            }
+
+            if (num == 2) {
+                letters2[i] = "C";
+            }
+            if (num == 3) {
+                letters2[i] = "D";
+            }
+        }
+        String[] letters3 = new String[200];
+        for (int i = 0; i < letters3.length; i++) {
+            int num = (int) (Math.round(Math.random() * 3));
+            if (num == 0) {
+                letters3[i] = "A";
+            }
+            if (num == 1) {
+                letters3[i] = "B";
+            }
+
+            if (num == 2) {
+                letters3[i] = "C";
+            }
+            if (num == 3) {
+                letters3[i] = "D";
+            }
+        }
+        String[] lettersABC = new String[200];
+        counter = 0;
+        for (int i = 0; i < lettersABC.length; i++) {
+            lettersABC[i] = (letters1[i] + letters2[i] + letters3[i]);
+            System.out.print(" " + lettersABC[i]);
+            counter++;
+            if ((counter % 20) == 0){
+                System.out.println();
+            }
+        }
+
+
+
 
 
     }
