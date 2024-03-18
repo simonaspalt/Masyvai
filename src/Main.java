@@ -53,10 +53,20 @@ public class Main {
             }
         }
 
-        System.out.println("2b");
+        System.out.println("2c");
 //Suskaičiuokite visų porinių (lyginių) indeksų reikšmių sumą;
-
-
+        int evensum = 0;
+        for (int i = 0; i < array.length; i++) {
+            if ((array[i] % 2) == 0){
+                evensum = evensum + array[i];
+            }
+        }
+        System.out.println("Sum of even numbers is: " + evensum);
+        System.out.println("2d");
+//d Sukurkite naują masyvą, kurio reikšmės yra 1 uždavinio masyvo reikšmes minus tos reikšmės indeksas; PVZ -
+//// Indeksai   0, 1, 2, 3
+//// Reiksmes 1, 17, 40, 3
+//// Rezultatas 1, 16, 38, 0
 
 
 
