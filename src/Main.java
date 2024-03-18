@@ -108,13 +108,61 @@ public class Main {
         }
         System.out.println(" even numbers: ");
         for (int i = 0; i < evennums.length; i++) {
-                System.out.print(evennums[i] + " ");
+            System.out.print(evennums[i] + " ");
         }
         System.out.println();
         System.out.println(" odd numbers: ");
         for (int i = 0; i < oddnums.length; i++) {
             System.out.print(oddnums[i] + " ");
         }
+
+        System.out.println();
+        System.out.println("2g");
+        // g Pirminio masyvo elementus su poriniais indeksais padarykite lygius 0 jeigu jie didesni už 15;
+
+        for (int i = 0; i < array3.length; i += 2) {
+            if (array3[i] > 15) {
+                array3[i] = 0;
+            }
+        }
+        System.out.println("New array: ");
+        for (int i = 0; i < array3.length; i++) {
+            System.out.print(array3[i] + " ");
+        }
+        System.out.println();
+        System.out.println("2h");
+        ///  Suraskite pirmą (mažiausią) indeksą, kurio elemento reikšmė didesnė už 10;
+        for (int i = 0; i < array3.length; i++) {
+            if (array3[i] > 10) {
+                System.out.println("First number > 10 is: " + array3[i] + " with index: " + i);
+                break;
+            }
+        }
+
+        System.out.println();
+        System.out.println("======== 3 ===========");
+//Sugeneruokite masyvą, kurio reikšmės atsitiktinės raidės A, B, C ir D,
+// o ilgis 200. Suskaičiuokite kiek yra kiekvienos raidės.
+        String[] letters = new String[199];
+        for (int i = 0; i < letters.length; i++) {
+            int num = (int) (Math.round(Math.random() * 3));
+            if (num == 0) {
+                letters[i] = "A";
+            }
+            if (num == 1) {
+                letters[i] = "B";
+            }
+
+            if (num == 2) {
+                letters[i] = "C";
+            }
+            if (num == 3) {
+                letters[i] = "D";
+            }
+            System.out.print(letters[i] + " ");
+        }
+
+
 
 
 
