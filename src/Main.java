@@ -162,11 +162,40 @@ public class Main {
             System.out.print(letters[i] + " ");
         }
 
+//Išrūšiuokite 3 uždavinio masyvą pagal abecėlę.
+        System.out.println();
+        System.out.println("======== 4 ===========");
+        counter = 0;
+        String[] lettersa = new String[199];
 
+        for (int q = 0; q < letters.length; q++) {
+            if (letters[q] == "A") {
+                lettersa[counter] = letters[q];
+                counter++;
+            }
+        }
+        for (int w = 0; w < letters.length; w++) {
+            if (letters[w] == "B") {
+                lettersa[counter] = letters[w];
+                counter++;
+            }
+        }
+        for (int e = 0; e < letters.length; e++) {
+            if (letters[e] == "C") {
+                lettersa[counter] = letters[e];
+                counter++;
+            }
+        }
+        for (int i = 0; i < letters.length; i++) {
+            if (letters[i] == "D") {
+                lettersa[counter] = letters[i];
+                counter++;
 
-
-
-
+            }
+        }
+        for (int p = 0; p < lettersa.length; p++) {
+            System.out.print(lettersa[p] + " ");
+        }
 
 
     }
