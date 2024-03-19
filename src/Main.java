@@ -208,7 +208,8 @@ public class Main {
         //A,A,D,D,A
         //ACA,CCA,BBD,DBD,ACA - TRYS UNIKALIOS, 4 KOMBINACIJOS
 
-        String[] letters1 = new String[200];
+        int x = 20;
+        String[] letters1 = new String[x];
         for (int i = 0; i < letters1.length; i++) {
             int num = (int) (Math.round(Math.random() * 3));
             if (num == 0) {
@@ -225,7 +226,7 @@ public class Main {
                 letters1[i] = "D";
             }
         }
-        String[] letters2 = new String[200];
+        String[] letters2 = new String[x];
         for (int i = 0; i < letters2.length; i++) {
             int num = (int) (Math.round(Math.random() * 3));
             if (num == 0) {
@@ -242,7 +243,7 @@ public class Main {
                 letters2[i] = "D";
             }
         }
-        String[] letters3 = new String[200];
+        String[] letters3 = new String[x];
         for (int i = 0; i < letters3.length; i++) {
             int num = (int) (Math.round(Math.random() * 3));
             if (num == 0) {
@@ -259,7 +260,34 @@ public class Main {
                 letters3[i] = "D";
             }
         }
-        String[] lettersABC = new String[200];
+        String[] lettersABC = new String[x];
+        counter = 0;
+        for (int i = 0; i < lettersABC.length; i++) {
+            lettersABC[i] = (letters1[i] + letters2[i] + letters3[i]);
+            System.out.print(" " + lettersABC[i]);
+            counter++;
+            if ((counter % 20) == 0){
+                System.out.println();
+            }
+        }
+        counter = 0;
+        for (int i = 0; i < lettersABC.length; i++) {
+            if (lettersABC[i].charAt(0) != lettersABC[i].charAt(1) && lettersABC[i].charAt(1) != lettersABC[i].charAt(2) )
+                counter++;
+        }
+        System.out.println();
+        System.out.println("There are " + counter + " unique values");
+        counter = 0;
+        for (int i = 0; i < lettersABC.length; i++) {
+            for (int p = (i + 1) ; p < lettersABC.length; p++) {
+                if (lettersABC[i] == lettersABC[p]){
+                    lettersABC[p] = " ";
+                    counter++;
+                }
+            }
+        }
+        System.out.println();
+        System.out.println("There are " + counter + " unique combos");
         counter = 0;
         for (int i = 0; i < lettersABC.length; i++) {
             lettersABC[i] = (letters1[i] + letters2[i] + letters3[i]);
